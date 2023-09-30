@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		93E96A4F2AC8C6B800CD7346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A4E2AC8C6B800CD7346 /* AppDelegate.swift */; };
 		93E96A512AC8C6B800CD7346 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A502AC8C6B800CD7346 /* SceneDelegate.swift */; };
-		93E96A532AC8C6B800CD7346 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A522AC8C6B800CD7346 /* ViewController.swift */; };
-		93E96A562AC8C6B800CD7346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E96A542AC8C6B800CD7346 /* Main.storyboard */; };
 		93E96A582AC8C6BB00CD7346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E96A572AC8C6BB00CD7346 /* Assets.xcassets */; };
 		93E96A5B2AC8C6BB00CD7346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E96A592AC8C6BB00CD7346 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		93E96A4B2AC8C6B800CD7346 /* SuperHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E96A4E2AC8C6B800CD7346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93E96A502AC8C6B800CD7346 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93E96A522AC8C6B800CD7346 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93E96A552AC8C6B800CD7346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93E96A572AC8C6BB00CD7346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93E96A5A2AC8C6BB00CD7346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93E96A5C2AC8C6BB00CD7346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +54,6 @@
 			children = (
 				93E96A4E2AC8C6B800CD7346 /* AppDelegate.swift */,
 				93E96A502AC8C6B800CD7346 /* SceneDelegate.swift */,
-				93E96A522AC8C6B800CD7346 /* ViewController.swift */,
-				93E96A542AC8C6B800CD7346 /* Main.storyboard */,
 				93E96A572AC8C6BB00CD7346 /* Assets.xcassets */,
 				93E96A592AC8C6BB00CD7346 /* LaunchScreen.storyboard */,
 				93E96A5C2AC8C6BB00CD7346 /* Info.plist */,
@@ -127,7 +121,6 @@
 			files = (
 				93E96A5B2AC8C6BB00CD7346 /* LaunchScreen.storyboard in Resources */,
 				93E96A582AC8C6BB00CD7346 /* Assets.xcassets in Resources */,
-				93E96A562AC8C6B800CD7346 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +131,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93E96A532AC8C6B800CD7346 /* ViewController.swift in Sources */,
 				93E96A4F2AC8C6B800CD7346 /* AppDelegate.swift in Sources */,
 				93E96A512AC8C6B800CD7346 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +139,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93E96A542AC8C6B800CD7346 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93E96A552AC8C6B800CD7346 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93E96A592AC8C6BB00CD7346 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +276,6 @@
 				INFOPLIST_FILE = SuperHeroes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +303,6 @@
 				INFOPLIST_FILE = SuperHeroes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
