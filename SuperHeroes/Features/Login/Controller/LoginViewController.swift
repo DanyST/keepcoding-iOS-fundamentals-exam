@@ -31,6 +31,7 @@ final class LoginViewController<NetworkModel: NetworkDataModelProtocol>: UIViewC
     override func viewDidLoad() {
         super.viewDidLoad()
         innerView.delegate = self
+        innerView.usernameTextField.becomeFirstResponder()
     }
 }
 
@@ -47,9 +48,11 @@ extension LoginViewController: LoginViewDelegate {
     func continueButtonDidTapped() {
         guard
             let userName = innerView.usernameTextField.text,
-            let password = innerView.passwordTextField.text
+            !userName.isEmpty,
+            let password = innerView.passwordTextField.text,
+            !password.isEmpty
         else {
-            print("No data")
+            showAlert(title: "Login Error", message: "Please enter your username and/or password.")
             return
         }
         
@@ -61,6 +64,10 @@ extension LoginViewController: LoginViewDelegate {
             case .success(_):
                 self?.navigateToHome()
             case let .failure(error):
+                self?.showAlert(
+                    title: "Login Error",
+                    message: "Invalid username and/or password. Please check your credentials and try again"
+                )
                 print("Error: \(error)")
             }
         }
