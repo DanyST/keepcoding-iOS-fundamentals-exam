@@ -38,6 +38,7 @@
 		93E96ABB2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABA2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift */; };
 		93E96ABD2AC9F60E00CD7346 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */; };
 		93E96ABF2AC9FB5E00CD7346 /* HeroesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABE2AC9FB5E00CD7346 /* HeroesRequest.swift */; };
+		93E96AC12ACA025C00CD7346 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AC02ACA025C00CD7346 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		93E96ABA2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataModelProtocol.swift; sourceTree = "<group>"; };
 		93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		93E96ABE2AC9FB5E00CD7346 /* HeroesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRequest.swift; sourceTree = "<group>"; };
+		93E96AC02ACA025C00CD7346 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				93E96A6B2AC8EAEE00CD7346 /* UITextField+SidePadding.swift */,
 				93E96A842AC900EA00CD7346 /* UIImage+Remote.swift */,
 				93E96A8D2AC90E5800CD7346 /* UIViewController+Child.swift */,
+				93E96AC02ACA025C00CD7346 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				93E96AB32AC9EF1600CD7346 /* LocalDataModel.swift in Sources */,
 				93E96AB92AC9F4AA00CD7346 /* TransformationListRequest.swift in Sources */,
 				93E96A672AC8CF1A00CD7346 /* LoginView.swift in Sources */,
+				93E96AC12ACA025C00CD7346 /* UIViewController+Alert.swift in Sources */,
 				93E96ABB2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift in Sources */,
 				93E96A8C2AC90CEB00CD7346 /* NibLoadable.swift in Sources */,
 				93E96AA82AC9E6FF00CD7346 /* Transformation.swift in Sources */,
