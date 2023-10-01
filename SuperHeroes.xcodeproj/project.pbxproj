@@ -39,7 +39,22 @@
 		93E96ABD2AC9F60E00CD7346 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */; };
 		93E96ABF2AC9FB5E00CD7346 /* HeroesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABE2AC9FB5E00CD7346 /* HeroesRequest.swift */; };
 		93E96AC12ACA025C00CD7346 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AC02ACA025C00CD7346 /* UIViewController+Alert.swift */; };
+		93E96AD02ACA051800CD7346 /* NetworkDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ACF2ACA051800CD7346 /* NetworkDataModelTests.swift */; };
+		93E96AD22ACA055500CD7346 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AD12ACA055500CD7346 /* MockURLProtocol.swift */; };
+		93E96AD42ACA094000CD7346 /* LocalDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AD32ACA094000CD7346 /* LocalDataModelProtocol.swift */; };
+		93E96AD62ACA0A7A00CD7346 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AD52ACA0A7A00CD7346 /* HTTPMethods.swift */; };
+		93E96AD82ACA0A8900CD7346 /* HTTPHeaderConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AD72ACA0A8900CD7346 /* HTTPHeaderConstants.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93E96ACA2ACA04EF00CD7346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93E96A432AC8C6B800CD7346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93E96A4A2AC8C6B800CD7346;
+			remoteInfo = SuperHeroes;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		93E96A4B2AC8C6B800CD7346 /* SuperHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,10 +91,23 @@
 		93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		93E96ABE2AC9FB5E00CD7346 /* HeroesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRequest.swift; sourceTree = "<group>"; };
 		93E96AC02ACA025C00CD7346 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		93E96AC62ACA04EF00CD7346 /* SuperHeroesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperHeroesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E96ACF2ACA051800CD7346 /* NetworkDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataModelTests.swift; sourceTree = "<group>"; };
+		93E96AD12ACA055500CD7346 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		93E96AD32ACA094000CD7346 /* LocalDataModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModelProtocol.swift; sourceTree = "<group>"; };
+		93E96AD52ACA0A7A00CD7346 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		93E96AD72ACA0A8900CD7346 /* HTTPHeaderConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		93E96A482AC8C6B800CD7346 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93E96AC32ACA04EF00CD7346 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				93E96A4D2AC8C6B800CD7346 /* SuperHeroes */,
+				93E96AC72ACA04EF00CD7346 /* SuperHeroesTests */,
 				93E96A4C2AC8C6B800CD7346 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				93E96A4B2AC8C6B800CD7346 /* SuperHeroes.app */,
+				93E96AC62ACA04EF00CD7346 /* SuperHeroesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +214,7 @@
 				93E96A8B2AC90CEB00CD7346 /* NibLoadable.swift */,
 				93E96A9F2AC9DD3F00CD7346 /* CharacterInfoDetailRepresentable.swift */,
 				93E96ABA2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift */,
+				93E96AD32ACA094000CD7346 /* LocalDataModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -334,6 +365,8 @@
 				93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */,
 				93E96AB42AC9EFD600CD7346 /* NetworkDataModel.swift */,
 				93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */,
+				93E96AD52ACA0A7A00CD7346 /* HTTPMethods.swift */,
+				93E96AD72ACA0A8900CD7346 /* HTTPHeaderConstants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +376,15 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		93E96AC72ACA04EF00CD7346 /* SuperHeroesTests */ = {
+			isa = PBXGroup;
+			children = (
+				93E96ACF2ACA051800CD7346 /* NetworkDataModelTests.swift */,
+				93E96AD12ACA055500CD7346 /* MockURLProtocol.swift */,
+			);
+			path = SuperHeroesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +407,24 @@
 			productReference = 93E96A4B2AC8C6B800CD7346 /* SuperHeroes.app */;
 			productType = "com.apple.product-type.application";
 		};
+		93E96AC52ACA04EF00CD7346 /* SuperHeroesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93E96ACC2ACA04EF00CD7346 /* Build configuration list for PBXNativeTarget "SuperHeroesTests" */;
+			buildPhases = (
+				93E96AC22ACA04EF00CD7346 /* Sources */,
+				93E96AC32ACA04EF00CD7346 /* Frameworks */,
+				93E96AC42ACA04EF00CD7346 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93E96ACB2ACA04EF00CD7346 /* PBXTargetDependency */,
+			);
+			name = SuperHeroesTests;
+			productName = SuperHeroesTests;
+			productReference = 93E96AC62ACA04EF00CD7346 /* SuperHeroesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -377,6 +437,10 @@
 				TargetAttributes = {
 					93E96A4A2AC8C6B800CD7346 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					93E96AC52ACA04EF00CD7346 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 93E96A4A2AC8C6B800CD7346;
 					};
 				};
 			};
@@ -394,6 +458,7 @@
 			projectRoot = "";
 			targets = (
 				93E96A4A2AC8C6B800CD7346 /* SuperHeroes */,
+				93E96AC52ACA04EF00CD7346 /* SuperHeroesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -406,6 +471,13 @@
 				93E96A832AC8FDBC00CD7346 /* CharacterInfoTableViewCell.xib in Resources */,
 				93E96A6E2AC8EC5300CD7346 /* Assets.xcassets in Resources */,
 				93E96A5B2AC8C6BB00CD7346 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93E96AC42ACA04EF00CD7346 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +509,12 @@
 				93E96AB92AC9F4AA00CD7346 /* TransformationListRequest.swift in Sources */,
 				93E96A672AC8CF1A00CD7346 /* LoginView.swift in Sources */,
 				93E96AC12ACA025C00CD7346 /* UIViewController+Alert.swift in Sources */,
+				93E96AD42ACA094000CD7346 /* LocalDataModelProtocol.swift in Sources */,
 				93E96ABB2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift in Sources */,
 				93E96A8C2AC90CEB00CD7346 /* NibLoadable.swift in Sources */,
 				93E96AA82AC9E6FF00CD7346 /* Transformation.swift in Sources */,
+				93E96AD62ACA0A7A00CD7346 /* HTTPMethods.swift in Sources */,
+				93E96AD82ACA0A8900CD7346 /* HTTPHeaderConstants.swift in Sources */,
 				93E96A992AC9139000CD7346 /* HeroDetailView.swift in Sources */,
 				93E96A782AC8F56700CD7346 /* GenericTableViewController.swift in Sources */,
 				93E96A512AC8C6B800CD7346 /* SceneDelegate.swift in Sources */,
@@ -448,7 +523,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93E96AC22ACA04EF00CD7346 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E96AD02ACA051800CD7346 /* NetworkDataModelTests.swift in Sources */,
+				93E96AD22ACA055500CD7346 /* MockURLProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93E96ACB2ACA04EF00CD7346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93E96A4A2AC8C6B800CD7346 /* SuperHeroes */;
+			targetProxy = 93E96ACA2ACA04EF00CD7346 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		93E96A592AC8C6BB00CD7346 /* LaunchScreen.storyboard */ = {
@@ -630,6 +722,42 @@
 			};
 			name = Release;
 		};
+		93E96ACD2ACA04EF00CD7346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZHL7XD48E;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.SuperHeroesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperHeroes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SuperHeroes";
+			};
+			name = Debug;
+		};
+		93E96ACE2ACA04EF00CD7346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZHL7XD48E;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.SuperHeroesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperHeroes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SuperHeroes";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -647,6 +775,15 @@
 			buildConfigurations = (
 				93E96A602AC8C6BB00CD7346 /* Debug */,
 				93E96A612AC8C6BB00CD7346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93E96ACC2ACA04EF00CD7346 /* Build configuration list for PBXNativeTarget "SuperHeroesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E96ACD2ACA04EF00CD7346 /* Debug */,
+				93E96ACE2ACA04EF00CD7346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
