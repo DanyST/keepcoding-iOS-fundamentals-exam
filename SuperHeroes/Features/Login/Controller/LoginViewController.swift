@@ -34,6 +34,14 @@ final class LoginViewController<NetworkModel: NetworkDataModelProtocol>: UIViewC
     }
 }
 
+// MARK: - Navigation
+extension LoginViewController {
+    private func navigateToHome() {
+        let viewController = HeroesListViewController()
+        navigationController?.setViewControllers([viewController], animated: true)
+    }
+}
+
 // MARK: - LoginViewDelegate
 extension LoginViewController: LoginViewDelegate {
     func continueButtonDidTapped() {
@@ -51,8 +59,7 @@ extension LoginViewController: LoginViewDelegate {
         ) { [weak self] result in
             switch result {
             case .success(_):
-                let viewController = HeroesListViewController()
-                self?.navigationController?.setViewControllers([viewController], animated: true)
+                self?.navigateToHome()
             case let .failure(error):
                 print("Error: \(error)")
             }
