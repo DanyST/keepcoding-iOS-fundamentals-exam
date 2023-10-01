@@ -7,16 +7,19 @@
 
 import UIKit
 
-final class HeroDetailViewController: UIViewController {
+final class HeroDetailViewController<NetworkModel: NetworkDataModelProtocol>: UIViewController {
     // MARK: - Subviews
-    private lazy var innerView = HeroDetailView(hero: hero)
+    private lazy var innerView = HeroDetailView(hero: hero)        
 
     // MARK: - Model
     private let hero: Hero
+    private let networkModel: NetworkModel
+    private var transformations: [Transformation]?
     
     // MARK: - Initialization
-    init(hero: Hero) {
+    init(hero: Hero, networkModel: NetworkModel = NetworkDataModel()) {
         self.hero = hero
+        self.networkModel = networkModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,19 +35,41 @@ final class HeroDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = hero.name
-                
+              
         navigationItem.rightBarButtonItem = innerView.getLoaderIndicatorBarButtonItem()
-        navigationItem.rightBarButtonItem = innerView.getTransformationsBarButtonItem(target: self, action: #selector(transformationsButtonDidTapped))
+        fetchTransformations()
+    }
+    
+    @objc
+    private func transformationsButtonDidTapped() {
+        let transformationsListViewController = TransformationsListViewController(
+            hero: hero,
+            transformations: transformations ?? []
+        )
+        let navigation = UINavigationController(rootViewController: transformationsListViewController)
+        present(navigation, animated: true)
     }
 }
 
 // MARK: - Methods
 extension HeroDetailViewController {
-    @objc
-    private func transformationsButtonDidTapped() {
-        let transformationsListViewController = TransformationsListViewController(hero: hero)
-        let navigation = UINavigationController(rootViewController: transformationsListViewController)
-        present(navigation, animated: true)
-        print("transformationsButtonDidTapped")
+    private func fetchTransformations() {
+        networkModel.getTransformations(for: hero) { [weak self] result in
+            switch result {
+            case let .success(transformations):
+                self?.transformations = transformations
+                self?.configureButtonTransformations(transformations: transformations)
+            case let .failure(error):
+                print("Error: \(error)")
+            }
+        }
+    }
+    
+    private func configureButtonTransformations(transformations: [Transformation]) {
+        guard !transformations.isEmpty else {
+            navigationItem.rightBarButtonItem = nil
+            return
+        }
+        navigationItem.rightBarButtonItem = innerView.getTransformationsBarButtonItem(target: self, action: #selector(transformationsButtonDidTapped))
     }
 }
