@@ -56,10 +56,16 @@ extension LoginViewController: LoginViewDelegate {
             return
         }
         
+        innerView.enableLoadingButton()
+        innerView.disableInteractiveViews()
+        
         networkModel.login(
             user: userName,
             password: password
         ) { [weak self] result in
+            self?.innerView.disableLoadingButton()
+            self?.innerView.enableInteractiveViews()
+            
             switch result {
             case .success(_):
                 self?.navigateToHome()
