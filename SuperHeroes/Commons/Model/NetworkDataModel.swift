@@ -7,21 +7,8 @@
 
 import Foundation
 
-final class NetworkDataModel: NetworkDataModelProtocol {
-    enum HTTPMethods: String {
-        case post = "POST"
-        case get = "GET"
-        case put = "PUT"
-    }
-    
-    enum HTTPHeaderConstants: String {
-        case bearer = "Bearer"
-        case basic = "Basic"
-        case authorization = "Authorization"
-        case aplicationJSONContentType = "application/json"
-        case contentType =  "Content-Type"
-    }
-    
+final class NetworkDataModel<LocalStorage: LocalDataModelProtocol> {
+    // MARK: - Properties
     private var baseComponents: URLComponents {
         var components = URLComponents()
         components.scheme = "https"
@@ -29,14 +16,46 @@ final class NetworkDataModel: NetworkDataModelProtocol {
         return components
     }
     
-    private func baseURLRequest(_ url: URL, httpMethod: HTTPMethods) -> Result<URLRequest, NetworkError> {
+    private var token: String? {
+        get {
+            if let token = localStorage.getToken() {
+                return token
+            }
+            return nil
+        }
+        set {
+            if let token = newValue {
+                localStorage.save(token: token)
+            }
+        }
+    }
+    
+    private let session: URLSession
+    private let localStorage: LocalStorage
+    
+    // MARK: - Initialization
+    init(
+        session: URLSession = .shared,
+        localStorage: LocalStorage = LocalDataModel()
+    ) {
+        self.session = session
+        self.localStorage = localStorage
+    }
+}
+
+// MARK: - Methods
+extension NetworkDataModel {
+    private func getBaseURLRequest(
+        _ url: URL,
+        httpMethod: HTTPMethods
+    ) -> Result<URLRequest, NetworkError> {
         guard let token else {
             return .failure(.noToken)
         }
         
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
-                        
+        
         request.setValue(
             "\(HTTPHeaderConstants.bearer.rawValue) \(token)",
             forHTTPHeaderField: HTTPHeaderConstants.authorization.rawValue
@@ -47,27 +66,10 @@ final class NetworkDataModel: NetworkDataModelProtocol {
         )
         return .success(request)
     }
-    
-    private var token: String? {
-        get {
-            if let token = LocalDataModel.getToken() {
-                return token
-            }
-            return nil
-        }
-        set {
-            if let token = newValue {
-                LocalDataModel.save(token: token)
-            }
-        }
-    }
-    
-    private let session: URLSession
-    
-    init(session: URLSession = .shared) {
-        self.session = session
-    }
-    
+}
+
+// MARK: - NetworkDataModelProtocol
+extension NetworkDataModel: NetworkDataModelProtocol {
     func login(
         user: String,
         password: String,
@@ -154,7 +156,7 @@ final class NetworkDataModel: NetworkDataModelProtocol {
             return
         }
         
-        let requestResult = baseURLRequest(url, httpMethod: .post)
+        let requestResult = getBaseURLRequest(url, httpMethod: .post)
         switch requestResult {
         case var .success(request):
             request.httpBody = encodedBody
@@ -186,7 +188,7 @@ final class NetworkDataModel: NetworkDataModelProtocol {
             return
         }
  
-        let requestResult = baseURLRequest(url, httpMethod: .post)
+        let requestResult = getBaseURLRequest(url, httpMethod: .post)
         switch requestResult {
         case var .success(request):
             request.httpBody = encodedBody
@@ -199,7 +201,9 @@ final class NetworkDataModel: NetworkDataModelProtocol {
             completion(.failure(error))
         }
     }
-    
+}
+
+extension NetworkDataModel {
     // Le pasamos T.Type porque necesitamos el tipo, no la instancia
     private func createTask<T: Decodable>(
         for request: URLRequest,
