@@ -7,14 +7,27 @@
 
 import UIKit
 
-final class HeroesListViewController: UIViewController {
+final class HeroesListViewController<NetworkModel: NetworkDataModelProtocol>: UIViewController {
     // MARK: - Child Controllers
     private lazy var genericTableViewController = setupGenericTableViewController()
+    
+    // MARK: - Model
+    private let networkModel: NetworkModel
+    
+    init(networkModel: NetworkModel = NetworkDataModel()) {
+        self.networkModel = networkModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        fetchHeroesList()
     }
 }
 
@@ -28,17 +41,25 @@ extension HeroesListViewController {
     }
 }
 
+// MARK: Fetch Heroes List
+extension HeroesListViewController {
+    private func fetchHeroesList() {
+        networkModel.getHeroes { [weak self] result in
+            switch result {
+            case let .success(heroesList):
+                self?.genericTableViewController.setItems(heroesList)
+            case let .failure(error):
+                print("Error: \(error)")
+            }
+        }
+    }
+}
+
 // MARK: - Setup GenericTableViewController
 extension HeroesListViewController {
     private func setupGenericTableViewController() -> GenericTableViewController<Hero, CharacterInfoTableViewCell> {
         let genericTableViewController = GenericTableViewController(
-            items: [
-                Hero(id: "",
-                     name: "Maestro Roshi",
-                     description: "Es un maestro de artes marciales que tiene una escuela, donde entrenará a Goku y Krilin para los Torneos de Artes Marciales. Aún en los primeros episodios había un toque de tradición y disciplina, muy bien representada por el maestro. Pero Muten Roshi es un anciano extremadamente pervertido con las chicas jóvenes, una actitud que se utilizaba en escenas divertidas en los años 80. En su faceta de experto en artes marciales, fue quien le enseñó a Goku técnicas como el Kame Hame Ha",
-                     photo: URL(string: "https://cdn.alfabetajuega.com/alfabetajuega/2020/06/Roshi.jpg?width=300")!,
-                     favorite: false)
-            ],
+            items: [],
             configureCellAction: { [weak self] cell, hero in
                 self?.configureCell(cell: cell, hero: hero)
             },

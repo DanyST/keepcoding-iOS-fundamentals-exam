@@ -12,7 +12,7 @@ final class LoginViewController<NetworkModel: NetworkDataModelProtocol>: UIViewC
     private lazy var innerView = LoginView()
     
     // MARK: - Properties
-    let networkModel: NetworkModel
+    private let networkModel: NetworkModel
     
     init(networkModel: NetworkModel = NetworkDataModel()) {
         self.networkModel = networkModel
