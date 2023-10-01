@@ -35,6 +35,8 @@
 		93E96AB32AC9EF1600CD7346 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */; };
 		93E96AB52AC9EFD600CD7346 /* NetworkDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AB42AC9EFD600CD7346 /* NetworkDataModel.swift */; };
 		93E96AB92AC9F4AA00CD7346 /* TransformationListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AB82AC9F4AA00CD7346 /* TransformationListRequest.swift */; };
+		93E96ABB2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABA2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift */; };
+		93E96ABD2AC9F60E00CD7346 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
 		93E96AB42AC9EFD600CD7346 /* NetworkDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataModel.swift; sourceTree = "<group>"; };
 		93E96AB82AC9F4AA00CD7346 /* TransformationListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationListRequest.swift; sourceTree = "<group>"; };
+		93E96ABA2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataModelProtocol.swift; sourceTree = "<group>"; };
+		93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 				93E96A792AC8FA6B00CD7346 /* CellIdentifiable.swift */,
 				93E96A8B2AC90CEB00CD7346 /* NibLoadable.swift */,
 				93E96A9F2AC9DD3F00CD7346 /* CharacterInfoDetailRepresentable.swift */,
+				93E96ABA2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 			children = (
 				93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */,
 				93E96AB42AC9EFD600CD7346 /* NetworkDataModel.swift */,
+				93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 				93E96A642AC8CEBE00CD7346 /* LoginViewController.swift in Sources */,
 				93E96AA52AC9E69200CD7346 /* TransformationsListViewController.swift in Sources */,
 				93E96A4F2AC8C6B800CD7346 /* AppDelegate.swift in Sources */,
+				93E96ABD2AC9F60E00CD7346 /* NetworkError.swift in Sources */,
 				93E96A692AC8D9A700CD7346 /* LoginViewDelegate.swift in Sources */,
 				93E96A8E2AC90E5800CD7346 /* UIViewController+Child.swift in Sources */,
 				93E96AAD2AC9EA8100CD7346 /* TransformationDetailView.swift in Sources */,
@@ -422,6 +429,7 @@
 				93E96AB32AC9EF1600CD7346 /* LocalDataModel.swift in Sources */,
 				93E96AB92AC9F4AA00CD7346 /* TransformationListRequest.swift in Sources */,
 				93E96A672AC8CF1A00CD7346 /* LoginView.swift in Sources */,
+				93E96ABB2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift in Sources */,
 				93E96A8C2AC90CEB00CD7346 /* NibLoadable.swift in Sources */,
 				93E96AA82AC9E6FF00CD7346 /* Transformation.swift in Sources */,
 				93E96A992AC9139000CD7346 /* HeroDetailView.swift in Sources */,

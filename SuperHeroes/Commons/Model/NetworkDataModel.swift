@@ -7,17 +7,7 @@
 
 import Foundation
 
-final class NetworkDataModel {
-    enum NetworkError: Error {
-        case unknown
-        case malFormedUrl
-        case decodingFailed
-        case encodingFailed
-        case noData
-        case statusCode(code: Int?)
-        case noToken
-    }
-    
+final class NetworkDataModel: NetworkDataModelProtocol {
     enum HTTPMethods: String {
         case post = "POST"
         case get = "GET"
@@ -72,7 +62,6 @@ final class NetworkDataModel {
         }
     }
     
-    // https://dragonball.keepcoding.education
     private let session: URLSession
     
     init(session: URLSession = .shared) {
@@ -106,11 +95,48 @@ final class NetworkDataModel {
             forHTTPHeaderField: HTTPHeaderConstants.authorization.rawValue
         )
         
-        createTask(
-            for: request,
-            using: String.self,
-            completion: completion
-        )
+        let task = session.dataTask(with: request) { [weak self] data, response, error in
+            // late let
+            // utilizando late let, y defer, nos aseguramos de que el compilador(estará pendiente) nos avise si se nos olvidó inicializar el result, que devolveremos en el completion en el defer
+            // lo que hace el código más limpio y robusto.
+            // Es una técnica bastante avanzada. Evitamos errores de forma preventiva.
+            let result: Result<String, NetworkError>
+            
+            // Utilizamos defer para no olvidarnos de ejecutar el completionHandler cuando terminenos de trabajar en este bloque de código del closure.
+            // defer se ejecutará al final del statement del closure.
+            // vemos el late let y el defer, e inmediatamente sabemos que se ejecutará el completion, y además si compila, todo está ok.
+            defer {
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            }
+            
+            guard error == nil else {
+                result = .failure(.unknown)
+                return
+            }
+            
+            guard let data else {
+                result = .failure(.noData)
+                return
+            }
+            let urlResponse = response as? HTTPURLResponse
+            let statusCode = urlResponse?.statusCode
+            
+            guard statusCode == 200 else {
+                result = .failure(.statusCode(code: statusCode))
+                return
+            }
+            
+            guard let token = String(data: data, encoding: .utf8) else {
+                result = .failure(.decodingFailed)
+                return
+            }
+            self?.token = token
+            result = .success(token)
+        }
+        
+        task.resume()
     }
     
     func getHeroes(completion: @escaping (Result<[Hero], NetworkError>) -> Void) {
@@ -141,7 +167,7 @@ final class NetworkDataModel {
     
     func getTransformations(
         for hero: Hero,
-        completion: @escaping (Result<[Transformation],NetworkError>) -> Void
+        completion: @escaping (Result<[Transformation], NetworkError>) -> Void
     ) {
         var components = baseComponents
         components.path = "/api/heros/tranformations"
