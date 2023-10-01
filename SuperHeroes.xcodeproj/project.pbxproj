@@ -32,6 +32,7 @@
 		93E96AA82AC9E6FF00CD7346 /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AA72AC9E6FF00CD7346 /* Transformation.swift */; };
 		93E96AAD2AC9EA8100CD7346 /* TransformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AAC2AC9EA8100CD7346 /* TransformationDetailView.swift */; };
 		93E96AAF2AC9EA9900CD7346 /* TransformationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AAE2AC9EA9900CD7346 /* TransformationDetailViewController.swift */; };
+		93E96AB32AC9EF1600CD7346 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		93E96AA72AC9E6FF00CD7346 /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
 		93E96AAC2AC9EA8100CD7346 /* TransformationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDetailView.swift; sourceTree = "<group>"; };
 		93E96AAE2AC9EA9900CD7346 /* TransformationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDetailViewController.swift; sourceTree = "<group>"; };
+		93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		93E96A742AC8F52D00CD7346 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				93E96AB12AC9EEC800CD7346 /* Model */,
 				93E96A6A2AC8EAC600CD7346 /* Extensions */,
 				93E96A7F2AC8FD2100CD7346 /* Protocols */,
 				93E96A7E2AC8FCEC00CD7346 /* Controllers */,
@@ -308,6 +311,14 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
+		93E96AB12AC9EEC800CD7346 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -393,6 +404,7 @@
 				93E96A952AC9136E00CD7346 /* HeroDetailViewController.swift in Sources */,
 				93E96A822AC8FDBC00CD7346 /* CharacterInfoTableViewCell.swift in Sources */,
 				93E96A712AC8F11C00CD7346 /* HeroesListViewController.swift in Sources */,
+				93E96AB32AC9EF1600CD7346 /* LocalDataModel.swift in Sources */,
 				93E96A672AC8CF1A00CD7346 /* LoginView.swift in Sources */,
 				93E96A8C2AC90CEB00CD7346 /* NibLoadable.swift in Sources */,
 				93E96AA82AC9E6FF00CD7346 /* Transformation.swift in Sources */,
