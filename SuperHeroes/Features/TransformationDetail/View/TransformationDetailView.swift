@@ -33,14 +33,6 @@ extension TransformationDetailView {
         setupConstraints()
     }
     
-    private func setupLabel(font: UIFont) -> UILabel {
-        let label = UILabel()
-        label.font = font
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }
-    
     private func setupCharacterInfoDetailRepresentable() -> CharacterInfoView<Transformation> {
         let characterInfoView = CharacterInfoView(characterInfo: transformation)
         return characterInfoView
