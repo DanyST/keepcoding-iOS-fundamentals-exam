@@ -33,6 +33,8 @@
 		93E96AAD2AC9EA8100CD7346 /* TransformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AAC2AC9EA8100CD7346 /* TransformationDetailView.swift */; };
 		93E96AAF2AC9EA9900CD7346 /* TransformationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AAE2AC9EA9900CD7346 /* TransformationDetailViewController.swift */; };
 		93E96AB32AC9EF1600CD7346 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */; };
+		93E96AB52AC9EFD600CD7346 /* NetworkDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AB42AC9EFD600CD7346 /* NetworkDataModel.swift */; };
+		93E96AB92AC9F4AA00CD7346 /* TransformationListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AB82AC9F4AA00CD7346 /* TransformationListRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		93E96AAC2AC9EA8100CD7346 /* TransformationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDetailView.swift; sourceTree = "<group>"; };
 		93E96AAE2AC9EA9900CD7346 /* TransformationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDetailViewController.swift; sourceTree = "<group>"; };
 		93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
+		93E96AB42AC9EFD600CD7346 /* NetworkDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataModel.swift; sourceTree = "<group>"; };
+		93E96AB82AC9F4AA00CD7346 /* TransformationListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,7 @@
 		93E96A912AC9107100CD7346 /* HeroDetail */ = {
 			isa = PBXGroup;
 			children = (
+				93E96AB62AC9F47A00CD7346 /* Models */,
 				93E96A972AC9137700CD7346 /* View */,
 				93E96A962AC9137200CD7346 /* Controller */,
 			);
@@ -270,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				93E96AA72AC9E6FF00CD7346 /* Transformation.swift */,
+				93E96AB82AC9F4AA00CD7346 /* TransformationListRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,8 +321,16 @@
 			isa = PBXGroup;
 			children = (
 				93E96AB22AC9EF1600CD7346 /* LocalDataModel.swift */,
+				93E96AB42AC9EFD600CD7346 /* NetworkDataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		93E96AB62AC9F47A00CD7346 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,7 +418,9 @@
 				93E96A952AC9136E00CD7346 /* HeroDetailViewController.swift in Sources */,
 				93E96A822AC8FDBC00CD7346 /* CharacterInfoTableViewCell.swift in Sources */,
 				93E96A712AC8F11C00CD7346 /* HeroesListViewController.swift in Sources */,
+				93E96AB52AC9EFD600CD7346 /* NetworkDataModel.swift in Sources */,
 				93E96AB32AC9EF1600CD7346 /* LocalDataModel.swift in Sources */,
+				93E96AB92AC9F4AA00CD7346 /* TransformationListRequest.swift in Sources */,
 				93E96A672AC8CF1A00CD7346 /* LoginView.swift in Sources */,
 				93E96A8C2AC90CEB00CD7346 /* NibLoadable.swift in Sources */,
 				93E96AA82AC9E6FF00CD7346 /* Transformation.swift in Sources */,
