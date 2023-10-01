@@ -30,6 +30,32 @@ final class LoginView: UIView {
     }
 }
 
+// MARK: - Setupviews
+extension LoginView {
+    func enableLoadingButton() {
+        continueButton.configuration?.showsActivityIndicator = true
+        continueButton.isUserInteractionEnabled = false
+    }
+    
+    
+    func disableLoadingButton() {
+        continueButton.configuration?.showsActivityIndicator = false
+        continueButton.isUserInteractionEnabled = true
+    }
+    
+    func disableInteractiveViews() {
+        [continueButton, usernameTextField, passwordTextField].forEach {
+            $0.isUserInteractionEnabled = false
+        }
+    }
+    
+    func enableInteractiveViews() {
+        [continueButton, usernameTextField, passwordTextField].forEach {
+            $0.isUserInteractionEnabled = true
+        }
+    }
+}
+
 // MARK: - Setup Subviews
 extension LoginView {
     private func setupView() {
