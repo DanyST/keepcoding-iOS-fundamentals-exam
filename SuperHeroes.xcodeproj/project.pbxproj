@@ -44,6 +44,7 @@
 		93E96AD42ACA094000CD7346 /* LocalDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AD32ACA094000CD7346 /* LocalDataModelProtocol.swift */; };
 		93E96AD62ACA0A7A00CD7346 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AD52ACA0A7A00CD7346 /* HTTPMethods.swift */; };
 		93E96AD82ACA0A8900CD7346 /* HTTPHeaderConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AD72ACA0A8900CD7346 /* HTTPHeaderConstants.swift */; };
+		93E96ADC2ACA0EEB00CD7346 /* LocalDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ADB2ACA0EEB00CD7346 /* LocalDataModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		93E96AD32ACA094000CD7346 /* LocalDataModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModelProtocol.swift; sourceTree = "<group>"; };
 		93E96AD52ACA0A7A00CD7346 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
 		93E96AD72ACA0A8900CD7346 /* HTTPHeaderConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderConstants.swift; sourceTree = "<group>"; };
+		93E96ADB2ACA0EEB00CD7346 /* LocalDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +385,7 @@
 			children = (
 				93E96ACF2ACA051800CD7346 /* NetworkDataModelTests.swift */,
 				93E96AD12ACA055500CD7346 /* MockURLProtocol.swift */,
+				93E96ADB2ACA0EEB00CD7346 /* LocalDataModelTests.swift */,
 			);
 			path = SuperHeroesTests;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			files = (
 				93E96AD02ACA051800CD7346 /* NetworkDataModelTests.swift in Sources */,
 				93E96AD22ACA055500CD7346 /* MockURLProtocol.swift in Sources */,
+				93E96ADC2ACA0EEB00CD7346 /* LocalDataModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
