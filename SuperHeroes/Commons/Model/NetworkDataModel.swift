@@ -148,13 +148,16 @@ final class NetworkDataModel: NetworkDataModelProtocol {
             return
         }
 
-        var urlComponents = URLComponents()
-        urlComponents.queryItems = [URLQueryItem(name: "name", value: "")]
+        let heroesRequest = HeroesRequest(name: "")
+        guard let encodedBody = try? JSONEncoder().encode(heroesRequest) else {
+            completion(.failure(.encodingFailed))
+            return
+        }
         
         let requestResult = baseURLRequest(url, httpMethod: .post)
         switch requestResult {
         case var .success(request):
-            request.httpBody = urlComponents.query?.data(using: .utf8)
+            request.httpBody = encodedBody
             createTask(
                 for: request,
                 using: [Hero].self,

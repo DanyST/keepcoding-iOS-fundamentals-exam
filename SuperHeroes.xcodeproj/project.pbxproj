@@ -37,6 +37,7 @@
 		93E96AB92AC9F4AA00CD7346 /* TransformationListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96AB82AC9F4AA00CD7346 /* TransformationListRequest.swift */; };
 		93E96ABB2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABA2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift */; };
 		93E96ABD2AC9F60E00CD7346 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */; };
+		93E96ABF2AC9FB5E00CD7346 /* HeroesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96ABE2AC9FB5E00CD7346 /* HeroesRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		93E96AB82AC9F4AA00CD7346 /* TransformationListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationListRequest.swift; sourceTree = "<group>"; };
 		93E96ABA2AC9F5CB00CD7346 /* NetworkDataModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataModelProtocol.swift; sourceTree = "<group>"; };
 		93E96ABC2AC9F60E00CD7346 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		93E96ABE2AC9FB5E00CD7346 /* HeroesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				93E96A892AC902E900CD7346 /* Hero.swift */,
+				93E96ABE2AC9FB5E00CD7346 /* HeroesRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				93E96A8E2AC90E5800CD7346 /* UIViewController+Child.swift in Sources */,
 				93E96AAD2AC9EA8100CD7346 /* TransformationDetailView.swift in Sources */,
 				93E96A7A2AC8FA6B00CD7346 /* CellIdentifiable.swift in Sources */,
+				93E96ABF2AC9FB5E00CD7346 /* HeroesRequest.swift in Sources */,
 				93E96AA02AC9DD3F00CD7346 /* CharacterInfoDetailRepresentable.swift in Sources */,
 				93E96A952AC9136E00CD7346 /* HeroDetailViewController.swift in Sources */,
 				93E96A822AC8FDBC00CD7346 /* CharacterInfoTableViewCell.swift in Sources */,
