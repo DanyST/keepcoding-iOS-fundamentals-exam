@@ -15,6 +15,16 @@
 		93E96A692AC8D9A700CD7346 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A682AC8D9A700CD7346 /* LoginViewDelegate.swift */; };
 		93E96A6C2AC8EAEE00CD7346 /* UITextField+SidePadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A6B2AC8EAEE00CD7346 /* UITextField+SidePadding.swift */; };
 		93E96A6E2AC8EC5300CD7346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E96A6D2AC8EC5300CD7346 /* Assets.xcassets */; };
+		93E96A712AC8F11C00CD7346 /* HeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A702AC8F11C00CD7346 /* HeroesListViewController.swift */; };
+		93E96A782AC8F56700CD7346 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A772AC8F56700CD7346 /* GenericTableViewController.swift */; };
+		93E96A7A2AC8FA6B00CD7346 /* CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A792AC8FA6B00CD7346 /* CellIdentifiable.swift */; };
+		93E96A822AC8FDBC00CD7346 /* CharacterInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A802AC8FDBC00CD7346 /* CharacterInfoTableViewCell.swift */; };
+		93E96A832AC8FDBC00CD7346 /* CharacterInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E96A812AC8FDBC00CD7346 /* CharacterInfoTableViewCell.xib */; };
+		93E96A852AC900EA00CD7346 /* UIImage+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A842AC900EA00CD7346 /* UIImage+Remote.swift */; };
+		93E96A8A2AC902E900CD7346 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A892AC902E900CD7346 /* Hero.swift */; };
+		93E96A8C2AC90CEB00CD7346 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A8B2AC90CEB00CD7346 /* NibLoadable.swift */; };
+		93E96A8E2AC90E5800CD7346 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A8D2AC90E5800CD7346 /* UIViewController+Child.swift */; };
+		93E96A932AC910E300CD7346 /* HeroDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E96A922AC910E300CD7346 /* HeroDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +38,16 @@
 		93E96A682AC8D9A700CD7346 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		93E96A6B2AC8EAEE00CD7346 /* UITextField+SidePadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SidePadding.swift"; sourceTree = "<group>"; };
 		93E96A6D2AC8EC5300CD7346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93E96A702AC8F11C00CD7346 /* HeroesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewController.swift; sourceTree = "<group>"; };
+		93E96A772AC8F56700CD7346 /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
+		93E96A792AC8FA6B00CD7346 /* CellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiable.swift; sourceTree = "<group>"; };
+		93E96A802AC8FDBC00CD7346 /* CharacterInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoTableViewCell.swift; sourceTree = "<group>"; };
+		93E96A812AC8FDBC00CD7346 /* CharacterInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterInfoTableViewCell.xib; sourceTree = "<group>"; };
+		93E96A842AC900EA00CD7346 /* UIImage+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Remote.swift"; sourceTree = "<group>"; };
+		93E96A892AC902E900CD7346 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		93E96A8B2AC90CEB00CD7346 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		93E96A8D2AC90E5800CD7346 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
+		93E96A922AC910E300CD7346 /* HeroDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +82,10 @@
 			children = (
 				93E96A4E2AC8C6B800CD7346 /* AppDelegate.swift */,
 				93E96A502AC8C6B800CD7346 /* SceneDelegate.swift */,
-				93E96A6A2AC8EAC600CD7346 /* Extensions */,
-				93E96A652AC8CEFE00CD7346 /* Models */,
+				93E96A742AC8F52D00CD7346 /* Commons */,
 				93E96A622AC8CDFD00CD7346 /* Login */,
+				93E96A6F2AC8F0F800CD7346 /* HeroesList */,
+				93E96A912AC9107100CD7346 /* HeroDetail */,
 				93E96A592AC8C6BB00CD7346 /* LaunchScreen.storyboard */,
 				93E96A6D2AC8EC5300CD7346 /* Assets.xcassets */,
 				93E96A5C2AC8C6BB00CD7346 /* Info.plist */,
@@ -75,26 +96,115 @@
 		93E96A622AC8CDFD00CD7346 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				93E96A632AC8CEBE00CD7346 /* LoginViewController.swift */,
-				93E96A662AC8CF1A00CD7346 /* LoginView.swift */,
-				93E96A682AC8D9A700CD7346 /* LoginViewDelegate.swift */,
+				93E96A882AC902D100CD7346 /* Controller */,
+				93E96A872AC902C100CD7346 /* View */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		93E96A652AC8CEFE00CD7346 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		93E96A6A2AC8EAC600CD7346 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				93E96A6B2AC8EAEE00CD7346 /* UITextField+SidePadding.swift */,
+				93E96A842AC900EA00CD7346 /* UIImage+Remote.swift */,
+				93E96A8D2AC90E5800CD7346 /* UIViewController+Child.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93E96A6F2AC8F0F800CD7346 /* HeroesList */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A8F2AC90EBC00CD7346 /* Controller */,
+				93E96A862AC902BA00CD7346 /* Models */,
+			);
+			path = HeroesList;
+			sourceTree = "<group>";
+		};
+		93E96A742AC8F52D00CD7346 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A6A2AC8EAC600CD7346 /* Extensions */,
+				93E96A7F2AC8FD2100CD7346 /* Protocols */,
+				93E96A7E2AC8FCEC00CD7346 /* Controllers */,
+				93E96A7B2AC8FC7A00CD7346 /* Views */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		93E96A7B2AC8FC7A00CD7346 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A902AC90EE300CD7346 /* CharacterInfoTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		93E96A7E2AC8FCEC00CD7346 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A772AC8F56700CD7346 /* GenericTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		93E96A7F2AC8FD2100CD7346 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A792AC8FA6B00CD7346 /* CellIdentifiable.swift */,
+				93E96A8B2AC90CEB00CD7346 /* NibLoadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		93E96A862AC902BA00CD7346 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A892AC902E900CD7346 /* Hero.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93E96A872AC902C100CD7346 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A682AC8D9A700CD7346 /* LoginViewDelegate.swift */,
+				93E96A662AC8CF1A00CD7346 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93E96A882AC902D100CD7346 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A632AC8CEBE00CD7346 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		93E96A8F2AC90EBC00CD7346 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A702AC8F11C00CD7346 /* HeroesListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		93E96A902AC90EE300CD7346 /* CharacterInfoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A802AC8FDBC00CD7346 /* CharacterInfoTableViewCell.swift */,
+				93E96A812AC8FDBC00CD7346 /* CharacterInfoTableViewCell.xib */,
+			);
+			path = CharacterInfoTableViewCell;
+			sourceTree = "<group>";
+		};
+		93E96A912AC9107100CD7346 /* HeroDetail */ = {
+			isa = PBXGroup;
+			children = (
+				93E96A922AC910E300CD7346 /* HeroDetail.swift */,
+			);
+			path = HeroDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E96A832AC8FDBC00CD7346 /* CharacterInfoTableViewCell.xib in Resources */,
 				93E96A6E2AC8EC5300CD7346 /* Assets.xcassets in Resources */,
 				93E96A5B2AC8C6BB00CD7346 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -171,8 +282,17 @@
 				93E96A642AC8CEBE00CD7346 /* LoginViewController.swift in Sources */,
 				93E96A4F2AC8C6B800CD7346 /* AppDelegate.swift in Sources */,
 				93E96A692AC8D9A700CD7346 /* LoginViewDelegate.swift in Sources */,
+				93E96A8E2AC90E5800CD7346 /* UIViewController+Child.swift in Sources */,
+				93E96A7A2AC8FA6B00CD7346 /* CellIdentifiable.swift in Sources */,
+				93E96A822AC8FDBC00CD7346 /* CharacterInfoTableViewCell.swift in Sources */,
+				93E96A712AC8F11C00CD7346 /* HeroesListViewController.swift in Sources */,
+				93E96A932AC910E300CD7346 /* HeroDetail.swift in Sources */,
 				93E96A672AC8CF1A00CD7346 /* LoginView.swift in Sources */,
+				93E96A8C2AC90CEB00CD7346 /* NibLoadable.swift in Sources */,
+				93E96A782AC8F56700CD7346 /* GenericTableViewController.swift in Sources */,
 				93E96A512AC8C6B800CD7346 /* SceneDelegate.swift in Sources */,
+				93E96A8A2AC902E900CD7346 /* Hero.swift in Sources */,
+				93E96A852AC900EA00CD7346 /* UIImage+Remote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
