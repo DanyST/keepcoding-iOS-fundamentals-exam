@@ -8,6 +8,7 @@
 import UIKit
 
 final class LoginView: UIView {
+    // MARK: - Subviews
     private lazy var backgroundImageView: UIImageView = setupBackgroundImageView()
     private lazy var containerStackView: UIStackView = setupVerticalStackView(spacing: 12)
     private lazy var textFieldsStackView: UIStackView = setupVerticalStackView(spacing: 0)
@@ -15,8 +16,10 @@ final class LoginView: UIView {
     lazy var passwordTextField: UITextField = setupPasswordTextField()
     lazy var continueButton: UIButton = setupContinueButton()
     
+    // MARK: - LoginViewDelegate
     weak var delegate: LoginViewDelegate?
     
+    // MARK: - Initialization
     init() {
         super.init(frame: .zero)
         setupView()
@@ -27,6 +30,7 @@ final class LoginView: UIView {
     }
 }
 
+// MARK: - Setup Subviews
 extension LoginView {
     private func setupView() {
         backgroundColor = .systemBackground
@@ -95,6 +99,7 @@ extension LoginView {
     }
 }
 
+// MARK: - Setup Constraints
 extension LoginView {
     private func setupConstraints() {
         setupBackgroundImageConstraints()
